@@ -1,8 +1,12 @@
+import { dbContext } from "../db/DbContext.js"
+
 class RatsService {
-  constructor() {
 
-
+  async getRats() {
+    const rats = await dbContext.Rats.find()
+    return rats
   }
+
 }
 
 export const ratsService = new RatsService
