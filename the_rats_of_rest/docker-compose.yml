@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/the_rats_of_rest:latest
+    restart: unless-stopped
+    env_file:
+      - the_rats_of_rest-env
+    ports:
+      - "3000:3000"
